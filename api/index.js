@@ -88,7 +88,7 @@ app.use(errorHandler);
 const httpServer = createServer(app);
 apolloServer.installSubscriptionHandlers(httpServer);
 
-httpServer.listen(PORT);
+httpServer.listen(PORT, '0.0.0.0');
 
 debug(`GraphQL API running at http://localhost:${PORT}/api`);
 

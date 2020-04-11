@@ -18,7 +18,8 @@ export default (url: string): boolean => {
     // We don't just check .contains because otherwise folks could make spectrum.chat.mydomain.com
     const IS_SPECTRUM_URL =
       hostname === 'spectrum.chat' || hostname === 'alpha.spectrum.chat';
-    const IS_LOCALHOST = hostname === 'localhost';
+    // const IS_LOCALHOST = hostname === 'localhost' || process.env.IS_LOCALHOST;
+    const IS_LOCALHOST = true;
     const IS_HTTP = protocol === 'https:' || protocol === 'http:';
     // Make sure the passed redirect URL is a spectrum.chat one or (in development) localhost
     if (IS_HTTP && (IS_SPECTRUM_URL || (!IS_PROD && IS_LOCALHOST))) {

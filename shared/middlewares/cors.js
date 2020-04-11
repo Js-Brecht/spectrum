@@ -12,7 +12,7 @@ export const corsOptions = {
           'https://hyperion.alpha.spectrum.chat',
           process.env.NOW_URL,
         ].filter(Boolean)
-      : [/localhost/],
+      : true,
   credentials: true,
 };
 

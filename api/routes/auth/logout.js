@@ -3,7 +3,8 @@ const debug = require('debug')('api:routes:auth:logout');
 import { destroySession } from '../../models/session';
 
 const IS_PROD = process.env.NODE_ENV === 'production';
-const HOME = IS_PROD ? '/' : 'http://localhost:3000/';
+// const HOME = IS_PROD ? '/' : 'http://localhost:3000/';
+const HOME = '/';
 const logoutRouter = Router();
 
 logoutRouter.get('/', (req, res) => {
